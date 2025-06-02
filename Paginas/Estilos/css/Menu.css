@@ -1,0 +1,97 @@
+﻿body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #343a40;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+    .navbar .logo img {
+        height: 50px;
+    }
+
+    .navbar .navbar-brand {
+        margin-left: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar .navbar-nav {
+        display: flex;
+        margin-left: auto;
+    }
+
+        .navbar .navbar-nav li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        .navbar .navbar-nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+            .navbar .navbar-nav a:hover {
+                text-decoration: underline;
+            }
+
+/* Estilo del dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #343a40;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    width: 200px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilos de la barra de menú para pantallas pequeñas */
+.navbar-toggler {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #343a40;
+    }
+
+        .navbar .navbar-nav.show {
+            display: flex;
+        }
+
+    .navbar .navbar-toggler {
+        display: block;
+        background-color: #343a40;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    .navbar .navbar-nav li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}

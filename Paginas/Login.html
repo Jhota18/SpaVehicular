@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login SPA Vehicular</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="Estilos/css/Estilos.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div class="box">
+        <img src="../Imagenes/iniciar-sesion.png" class="profile" height="150" width="150">
+        <h2 align="center">Iniciar Sesión</h2>
+
+        <form id="form">
+            <label for="txtUsu">Usuario:</label>
+            <input type="text" id="txtUsuario" placeholder="Ingrese el usuario..." maxlength="25">
+
+
+            <label for="txtClave">Contraseña</label>
+            <input type="password" id="txtClave" placeholder="&#128273; Ingresa tu contrasena.." maxlength="25">
+
+            <button type="button" class="btn btn-primary btn-block" onclick="Ingresar()">INGRESAR</button>
+
+
+            <div class="card-footer">
+                <div id="dvMensaje" class=""></div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../Scripts/jquery-3.7.0.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/Comunes/CRUD.js"></script>
+    <script src="Scripts/frmLogin.js"></script>
+</body>
+</html>
