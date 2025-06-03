@@ -36,7 +36,7 @@
             $("#dvMensaje").html(Respuesta[0].Mensaje);
             document.cookie = "Perfil=" + Respuesta[0].Perfil;
             document.cookie = "Usuario=" + Respuesta[0].Usuario;
-            window.location.href = Respuesta[0].PaginaInicio;
+            window.location.href = "frmInicio.html";
         }
     }
 }
