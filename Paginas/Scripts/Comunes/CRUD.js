@@ -249,6 +249,87 @@ async function LlenarTablaXServiciosAuth(URLServicio, TablaLlenar) {
         $("#dvMensaje").html(error);
     }
 }
+
+async function LlenarTablaXEmpleadosAuth(URLServicio, TablaLlenar) {
+    try {
+        const Token = getCookie("token");
+        const Respuesta = await fetch(URLServicio, {
+            method: "GET",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": 'Bearer ' + Token
+            }
+        });
+
+        const Rpta = await Respuesta.json();
+
+        $(TablaLlenar).DataTable({
+            data: Rpta,
+            columns: [
+                { data: 'Nombres', title: 'Nombres' },
+                { data: 'Apellidos', title: 'Apellidos' },
+                {
+                    data: 'Fecha_Nacimiento',
+                    title: 'Fecha de Nacimiento',
+                    render: function (data) {
+                        return new Date(data).toLocaleDateString("es-CO");
+                    }
+                },
+                { data: 'Cargo', title: 'Cargo' },
+                {
+                    data: 'Salario',
+                    title: 'Salario',
+                    render: function (data) {
+                        return new Intl.NumberFormat('es-CO', {
+                            style: 'currency',
+                            currency: 'COP',
+                            minimumFractionDigits: 0
+                        }).format(data);
+                    }
+                },
+                {
+                    data: 'Telefono_Empleado',
+                    title: 'Teléfono',
+                    render: function (data) {
+                        return data?.Telefono || '';
+                    }
+                },
+                {
+                    data: 'Email_Empleado',
+                    title: 'Email',
+                    render: function (data) {
+                        return data?.Email || '';
+                    }
+                },
+                {
+                    data: 'Sede1',
+                    title: 'Sede',
+                    render: function (data) {
+                        return data?.Nombre || '';
+                    }
+                },
+                {
+                    title: 'Ciudad',
+                    render: function (data, type, row) {
+                        return row?.Sede1?.Ciudad1?.Nombre || '';
+                    }
+                },
+                {
+                    title: 'Departamento',
+                    render: function (data, type, row) {
+                        return row?.Sede1?.Ciudad1?.Departamento1?.Nombre || '';
+                    }
+                }
+            ],
+            destroy: true
+        });
+
+    } catch (error) {
+        $("#dvMensaje").html(error);
+    }
+}
+
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);

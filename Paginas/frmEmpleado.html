@@ -10,6 +10,8 @@
     <link href="Estilos/css/Menu.css" rel="stylesheet" />
     <link href="Estilos/all.min.css" rel="stylesheet" />
     <!-- Select2 -->
+    <link href="Estilos/select2.min.css" rel="stylesheet" />
+    <link href="Estilos/select2-bootstrap4.min.css" rel="stylesheet" />
     <!--Estilos para las tablas(datatables)-->
     <link href="Estilos/dataTables.min.css" rel="stylesheet" />
     <link href="Estilos/dataTables.bootstrap4.min.css" rel="stylesheet" />
@@ -43,19 +45,42 @@
                                             <div class="col-md-1">
                                                 <div class="form-group">
                                                     <label for="txtidEmp">Código Empleado</label>
+                                                    
                                                     <input type="text" class="form-control" id="txtcodEmp" width="15" placeholder="Código Empleado..." disabled="disabled">
                                                 </div>
                                             </div>
                                             <div class="col-md-1">
                                                 <div class="form-group">
                                                     <label for="txtisSede">Código Sede</label>
-                                                    <input type="text" class="form-control" id="txtisSede" width="15" placeholder="Código Sede...">
+                                                    <select class="form-control select2" id="cbocodSede" style="width: 100%;">
+                                                        <option selected="selected"></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                    </select>
+                                                    <!--<input type="text" class="form-control" id="txtisSede" width="15" placeholder="Código Sede...">-->
                                                 </div>
                                             </div>
-                                            <div class="col-md-1">
+                                            <div class="col-md-2">
                                                 <div class="form-group">
-                                                    <label for="txtCargo">Código Cargo</label>
-                                                    <input type="text" class="form-control" id="txtCargo" width="15" placeholder="Código Cargo...">
+                                                    <label for="txtCargo">Cargo</label>
+                                                    <!--<select class="form-control select2" id="cbocodCargo" style="width: 100%;">
+                                                        <option selected="selected"></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                        <option></option>
+                                                    </select>-->
+                                                    <input type="text" class="form-control" id="txtCargo" width="15" placeholder="Cargo...">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -64,7 +89,7 @@
                                                     <input type="text" class="form-control" id="txtNombre" placeholder="Ingrese Nombre...">
                                                 </div>
                                             </div>
-                                            <div class="col-md-5">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="txtApell">Apellidos</label>
                                                     <input type="text" class="form-control" id="txtApell" placeholder="Ingrese Apellidos...">
@@ -88,7 +113,7 @@
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="txtUsuario">Usuario</label>
-                                                    <input type="text" class="form-control" id="txtUsuario" placeholder="Ingrese Salario...">
+                                                    <input type="text" class="form-control" id="txtUsuario" placeholder="Ingrese Usuario...">
                                                 </div>
                                             </div>
 
@@ -187,6 +212,7 @@
     <script src="../Scripts/jquery-3.7.0.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <!-- Select2 -->
+    <script src="../Scripts/select2.min.js"></script>
     <!-- Tabla -->
     <script src="../Scripts/jquery.dataTables.min.js"></script>
     <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
