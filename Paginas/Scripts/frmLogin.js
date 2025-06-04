@@ -2,8 +2,8 @@
     //var: Variables globales a la página
     //let: Variables locales
     //const: Constantes locales
-    //let BaseURL = "http://spa-vehicular.runasp.net/";
-    let BaseURL = "http://localhost:58020/";
+    let BaseURL = "http://spa-vehicular.runasp.net/";
+    //let BaseURL = "http://localhost:58020/";
     let URL = BaseURL + "api/Login/Ingresar";
     const login = new Login($("#txtUsuario").val(), $("#txtClave").val(), "");
     const Respuesta = await EjecutarComandoServicioRpta("POST", URL, login);
