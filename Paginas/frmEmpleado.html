@@ -45,11 +45,11 @@
                                             <div class="col-md-1">
                                                 <div class="form-group">
                                                     <label for="txtidEmp">Código Empleado</label>
-                                                    
+
                                                     <input type="text" class="form-control" id="txtcodEmp" width="15" placeholder="Código Empleado..." disabled="disabled">
                                                 </div>
                                             </div>
-                                            <div class="col-md-1">
+                                            <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label for="txtisSede">Código Sede</label>
                                                     <select class="form-control select2" id="cbocodSede" style="width: 100%;">
@@ -83,13 +83,13 @@
                                                     <input type="text" class="form-control" id="txtCargo" width="15" placeholder="Cargo...">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="txtNombre">Nombre</label>
                                                     <input type="text" class="form-control" id="txtNombre" placeholder="Ingrese Nombre...">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="txtApell">Apellidos</label>
                                                     <input type="text" class="form-control" id="txtApell" placeholder="Ingrese Apellidos...">
@@ -134,8 +134,8 @@
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="txtUsuario">Email</label>
-                                                    <input type="text" class="form-control" id="txtUsuario" placeholder="Ingrese Email...">
+                                                    <label for="txtEmail">Email</label>
+                                                    <input type="text" class="form-control" id="txtEmail" placeholder="Ingrese Email...">
                                                 </div>
                                             </div>
 
@@ -146,7 +146,7 @@
                                             <div class="row">
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <button type="button" id="btnAgr" class="btn-block btn-lg btn-primary">Agregar</button>
+                                                        <button type="button" id="btnAgr" class="btn-block btn-lg btn-primary" onclick="crearEmpleado()">Agregar</button>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
@@ -209,10 +209,12 @@
         </div>
     </section>
     <!-- Para los script de uso -->
+
     <script src="../Scripts/jquery-3.7.0.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <!-- Select2 -->
     <script src="../Scripts/select2.min.js"></script>
+
     <!-- Tabla -->
     <script src="../Scripts/jquery.dataTables.min.js"></script>
     <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
@@ -220,6 +222,7 @@
     <script src="Scripts/Comunes/CRUD.js"></script>
     <!-- Impresión -->
     <!-- Para el script de control del form -->
+    <script src="Scripts/Comunes/Combos.js"></script>
     <script src="Scripts/frmEmpleado.js"></script>
 </body>
 </html>

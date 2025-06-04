@@ -46,3 +46,5 @@ async function llenarComboSede(url, combo) {
         return "Error";
     }
 }
+
+window.llenarComboSede = llenarComboSede;

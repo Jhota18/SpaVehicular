@@ -11,10 +11,12 @@
         //Leer la respuesta
         const Resultado = await Respuesta.json();
         $("#dvMensaje").html(Resultado);
+        return Resultado;
     }
     catch (error) {
         //Se presenta el error en un div de Mensaje
         $("#dvMensaje").html(error);
+        return undefined;
     }
 }
 async function EjecutarComandoServicioAuth(Metodo, URLServicio, Objeto) {
