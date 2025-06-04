@@ -1,6 +1,6 @@
 ﻿ 
-//var BaseUrl = "http://localhost:58020/";
-var BaseUrl = "http://spa-vehicular.runasp.net/"
+var BaseUrl = "http://localhost:58020/";
+//var BaseUrl = "http://spa-vehicular.runasp.net/"
 
 jQuery(function () {
     //Carga el menú

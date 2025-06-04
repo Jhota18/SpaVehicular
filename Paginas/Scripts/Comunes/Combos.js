@@ -47,4 +47,27 @@ async function llenarComboSede(url, combo) {
     }
 }
 
+async function llenarComboEmp(url, combo) {
+    try {
+        const Respuesta = await fetch(url, {
+            method: "GET",
+            mode: "cors",
+            headers: { "content-type": "application/json" }
+        });
+        const Rpta = await Respuesta.json();
+
+        $(combo).empty(); // Limpia el combo
+        $(combo).append('<option value="">Seleccione un empleado</option>'); // Opción por defecto
+
+        for (let i = 0; i < Rpta.length; i++) {
+            let id = Rpta[i].ID_Empleado;
+            let nombre = Rpta[i].Nombres +" "+ Rpta[i].Apellidos;
+            $(combo).append('<option value="' + id + '">' + nombre + '</option>');
+        }
+
+        return "Termino";
+    } catch (error) {
+        return "Error";
+    }
+}
 window.llenarComboSede = llenarComboSede;
