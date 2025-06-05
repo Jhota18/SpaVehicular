@@ -308,18 +308,21 @@ async function LlenarTablaXEmpleadosAuth(URLServicio, TablaLlenar) {
                     data: 'Sede1',
                     title: 'Sede',
                     render: function (data) {
+                        console.log("sede" + data?.Nombre || '')
                         return data?.Nombre || '';
                     }
                 },
                 {
                     title: 'Ciudad',
                     render: function (data, type, row) {
+                        console.log("Ciudad " + row?.Sede1?.Ciudad1?.Nombre || '')
                         return row?.Sede1?.Ciudad1?.Nombre || '';
                     }
                 },
                 {
                     title: 'Departamento',
                     render: function (data, type, row) {
+                        console.log("Ciudad " + row?.Sede1?.Ciudad1?.Departamento1?.Nombre || '')
                         return row?.Sede1?.Ciudad1?.Departamento1?.Nombre || '';
                     }
                 }
